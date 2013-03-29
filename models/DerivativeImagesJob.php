@@ -68,22 +68,17 @@ class DerivativeImagesJob extends Omeka_Job_AbstractJob
     public function perform()
     {
         // Fetch file IDs according to the passed options.
-        $wheres = array();
+        $select = $this->_db->select()
+            ->from($this->_db->File, array('id'));
         if ('has_derivative' == $this->_options['process_type']) {
-            $wheres[] = "has_derivative_image = 1";
+            $select->where('has_derivative_image = 1');
         } else if ('has_no_derivative' == $this->_options['process_type']) {
-            $wheres[] = "has_derivative_image = 0";
+            $select->where('has_derivative_image = 0');
         }
         if (is_array($this->_options['mime_types'])) {
-            $wheres[] = $this->_db->quoteInto("mime_type IN (?)", $this->_options['mime_types']);
+            $select->where('mime_type IN (?)', $this->_options['mime_types']);
         }
-        $sql = "SELECT id FROM {$this->_db->File}";
-        foreach ($wheres as $key => $where) {
-            $sql .= (0 == $key) ? "\nWHERE" : "\nAND";
-            $sql .= " ($where)";
-        }
-        $sql .= "\nGROUP BY id";
-        $fileIds = $this->_db->fetchCol($sql);
+        $fileIds = $select->query()->fetchAll(Zend_Db::FETCH_COLUMN);
         
         // Iterate files and create derivatives.
         foreach ($fileIds as $fileId) {
