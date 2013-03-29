@@ -87,7 +87,8 @@ class DerivativeImagesJob extends Omeka_Job_AbstractJob
             
             // Register which image derivatives to create.
             foreach ($this->_derivatives as $type => $constraint) {
-                $this->_imageCreator->addDerivative($type, $constraint);
+                $this->_imageCreator->addDerivative($type, $constraint, 
+                    'square_thumbnail' == $type ? true : false);
             }
             
             // Create derivatives.
