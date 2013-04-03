@@ -16,7 +16,7 @@ class DerivativeImagesPlugin extends Omeka_Plugin_AbstractPlugin
     /**
      * @var array This plugin's hooks.
      */
-    protected $_hooks = array('install');
+    protected $_hooks = array('install', 'define_acl');
     
     /**
      * @var array This plugin's filters.
@@ -40,11 +40,22 @@ class DerivativeImagesPlugin extends Omeka_Plugin_AbstractPlugin
     }
     
     /**
+     * Allow access only to super users.
+     */
+    public function hookDefineAcl($args)
+    {
+        $args['acl']->addResource('DerivativeImages_Index');
+        $args['acl']->deny('admin', 'DerivativeImages_Index');
+    }
+    
+    /**
      * Add the Derivative Images navigation link.
      */
     public function filterAdminNavigationMain($nav)
     {
-        $nav[] = array('label' => __('Derivative Images'), 'uri' => url('derivative-images'));
+        $nav[] = array('label' => __('Derivative Images'), 
+                       'uri' => url('derivative-images'), 
+                       'resource' => 'DerivativeImages_Index');
         return $nav;
     }
 }
