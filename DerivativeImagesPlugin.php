@@ -30,12 +30,12 @@ class DerivativeImagesPlugin extends Omeka_Plugin_AbstractPlugin
     {
         // Must be using the filesystem storage adapter.
         if (!(Zend_Registry::get('storage')->getAdapter() instanceof Omeka_Storage_Adapter_Filesystem)) {
-            throw new Omeka_Plugin_Installer_Exception('The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem.');
+            throw new Omeka_Plugin_Installer_Exception(__('The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem.'));
         }
         
         // The ImageMagick directory path must be set.
         if (!get_option('path_to_convert')) {
-            throw new Omeka_Plugin_Installer_Exception('The ImageMagick directory path is missing.');
+            throw new Omeka_Plugin_Installer_Exception(__('The ImageMagick directory path is missing.'));
         }
     }
     

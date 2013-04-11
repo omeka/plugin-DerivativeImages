@@ -43,12 +43,12 @@ class DerivativeImagesJob extends Omeka_Job_AbstractJob
         // Set the storage.
         $this->_storage = Zend_Registry::get('storage');
         if (!($this->_storage->getAdapter() instanceof Omeka_Storage_Adapter_Filesystem)) {
-            throw new Omeka_Storage_Exception('The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem.');
+            throw new Omeka_Storage_Exception(__('The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem.'));
         }
         
         // Set the image creator.
         if (!$pathToConvert = get_option('path_to_convert')) {
-            throw new Omeka_File_Derivative_Exception('The ImageMagick directory path is missing.');
+            throw new Omeka_File_Derivative_Exception(__('The ImageMagick directory path is missing.'));
         }
         $this->_imageCreator = new Omeka_File_Derivative_Image_Creator($pathToConvert);
         
