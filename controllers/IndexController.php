@@ -21,7 +21,7 @@ class DerivativeImages_IndexController extends Omeka_Controller_AbstractActionCo
                              'mime_types' => $this->getParam('mime_types'));
             Zend_Registry::get('bootstrap')->getResource('jobs')
                 ->sendLongRunning('DerivativeImagesJob', $options);
-            $this->_helper->flashMessenger('Processing files. This may take a while. You may continue administering your site.', 'success');
+            $this->_helper->flashMessenger(__('Processing files. This may take a while. You may continue administering your site.'), 'success');
         }
         
         $db = $this->_helper->db->getDb();
