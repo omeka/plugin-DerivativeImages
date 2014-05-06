@@ -45,13 +45,14 @@ class DerivativeImagesJob extends Omeka_Job_AbstractJob
         if (!($this->_storage->getAdapter() instanceof Omeka_Storage_Adapter_Filesystem)) {
             throw new Omeka_Storage_Exception(__('The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem.'));
         }
-        
+
         // Set the image creator.
-        if (!$pathToConvert = get_option('path_to_convert')) {
+        try {
+            $this->_imageCreator = Zend_Registry::get('file_derivative_creator');
+        } catch (Zend_Exception $e) {
             throw new Omeka_File_Derivative_Exception(__('The ImageMagick directory path is missing.'));
         }
-        $this->_imageCreator = new Omeka_File_Derivative_Image_Creator($pathToConvert);
-        
+
         // Set the configured derivative types and constraints.
         foreach ($this->_validDerivativeTypes as $type) {
             if (!is_array($this->_options['derivative_types']) 
@@ -87,16 +88,20 @@ class DerivativeImagesJob extends Omeka_Job_AbstractJob
             
             // Register which image derivatives to create.
             foreach ($this->_derivatives as $type => $constraint) {
-                $this->_imageCreator->addDerivative($type, $constraint, 
-                    'square_thumbnail' == $type ? true : false);
+                $this->_imageCreator->addDerivative($type, $constraint);
             }
             
             // Create derivatives.
-            $imageCreated = $this->_imageCreator->create(
-                FILES_DIR . '/' . $file->getStoragePath('original'), 
-                $file->getDerivativeFilename(), 
-                $file->mime_type
-            );
+            try {
+                $imageCreated = $this->_imageCreator->create(
+                    FILES_DIR . '/' . $file->getStoragePath('original'),
+                    $file->getDerivativeFilename(),
+                    $file->mime_type
+                );
+            } catch (Exception $e) {
+                _log($e);
+                $imageCreated = false;
+            }
             
             // Confirm that the file was derivable.
             if (!$imageCreated) {

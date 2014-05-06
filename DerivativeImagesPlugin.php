@@ -34,7 +34,7 @@ class DerivativeImagesPlugin extends Omeka_Plugin_AbstractPlugin
         }
         
         // The ImageMagick directory path must be set.
-        if (!get_option('path_to_convert')) {
+        if (!Zend_Registry::isRegistered('file_derivative_creator')) {
             throw new Omeka_Plugin_Installer_Exception(__('The ImageMagick directory path is missing.'));
         }
     }
