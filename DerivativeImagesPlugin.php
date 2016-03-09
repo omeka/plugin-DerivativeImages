@@ -51,11 +51,10 @@ class DerivativeImagesPlugin extends Omeka_Plugin_AbstractPlugin
     /**
      * Allow Translations 
      */
-	public function hookInitialize()
-	{
-		add_translation_source(dirname(__FILE__) . '/languages');
-	}
-
+    public function hookInitialize()
+    {
+        add_translation_source(dirname(__FILE__) . '/languages');
+    }
     
     /**
      * Add the Derivative Images navigation link.
