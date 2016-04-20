@@ -1,0 +1,109 @@
+# Translation for the DerivativeImages plugin for Omeka.
+# Copyright (C) 2013 Roy Rosenzweig Center for History and New Media
+# This file is distributed under the same license as the Omeka package.
+# FIRST AUTHOR Nicolas Rucks <nrucks@leloir.org.ar>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Omeka\n"
+"Report-Msgid-Bugs-To: omeka-dev@googlegroups.com\n"
+"POT-Creation-Date: 2012-11-26 14:33-0500\n"
+"PO-Revision-Date: 2016-03-01 11:52-0300\n"
+"Last-Translator: Nicolas Rucks <nrucks@leloir.org.ar>\n"
+"Language-Team: "
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: DerivativeImagesPlugin.php
+#This one not translated
+msgid "The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem."
+msgstr "The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem."
+
+msgid "The ImageMagick directory path is missing."
+msgstr "Falta el directorio de ImageMagick."
+
+msgid "Derivative Images"
+msgstr "Imágenes derivadas"
+
+#: index.php
+msgid ""
+"Omeka attempts to create fullsize, thumbnail, and square thumbnail derivative "
+"images when a file is added. This plugin recreates (or creates) derivative images "
+"according to the size constraints set in the %sAppearance settings%s. This plugin "
+"is useful if image sizes must change for a new theme, after upgrading from an "
+"earlier version of Omeka, or after your server's %sImageMagick%s software has "
+"been upgraded."
+
+msgstr ""
+"Cuando se añade un archivo, Omeka trata de crear las siguientes imágenes derivadas: "
+"fullsize, thumbnail, y thumbnail cuadrado. "
+"Este plugin recrea (o crea) las imágenes derivadas "
+"de acuerdo a las restricciones de tamaño configuradas en %sAppearance settings%s. "
+"Este plugin es útil si es necesario cambiar el tamaño de las imágenes para un nuevo theme, "
+"después de actualizar desde una versión más antigua de Omeka, "
+"o después de actualizar %sImageMagick%s en su servidor."
+
+msgid ""
+"Please note that Omeka is unable to create derivative images for some files. We "
+"highly recommend that you back up Omeka's files directory before running this "
+"process."
+
+msgstr ""
+"Por favor tenga en cuenta que Omeka no puede crear las imágenes derivadas de algunos archivos. "
+"Recomendamos fuertemente que realice un backup de su directorio de archivos de Omeka "
+"antes de correr este proceso."
+
+#Process type
+msgid "Process type"
+msgstr "Tipo de proceso"
+
+msgid "Select files for creating new derivative images."
+msgstr "Seleccionar archivos de los cuales crear nuevas imágenes derivadas."
+
+msgid "All files"
+msgstr "Todos los archivos"
+
+msgid "Files that have derivative images"
+msgstr "Archivos que ya tienen imágenes derivadas"
+
+msgid "Files that do not have derivative images"
+msgstr "Archivos que NO tienen imágenes derivadas"
+
+#Image sizes
+msgid "Image sizes"
+msgstr "Tamaños de imágenes"
+
+msgid "Select which image sizes you want to create. Checking none will create all image sizes. (Sizes listed here are set in the %sAppearance settings%s.)"
+msgstr "Elija los tamaños de imagen que desea crear. Si no marca ninguno, se crearán todos. (Los que aquí figuran son los que han sido configurados en %sAppearance settings%s)."
+
+msgid "Fullsize"
+msgstr "Fullsize"
+
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+msgid "Square thumbnail"
+msgstr "Thumbnail cuadrado"
+
+msgid "pixels"
+msgstr "píxeles"
+
+msgid ""
+"Select which file MIME types you want to process. Checking none will process "
+"all MIME types. (This list represents every MIME type currently available "
+"in this Omeka site.)"
+msgstr ""
+"Seleccione el tipo de archivo MIME que desea procesar. Si no marca ninguno, se procesarán todos. "
+"(Esta lista representa los MIME type actualmente disponibles "
+"en este sitio Omeka)."
+
+msgid "Process Files"
+msgstr "Procesar archivos"
+
+#MIME types
+msgid "MIME types"
+msgstr "MIME types"
