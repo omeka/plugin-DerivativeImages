@@ -1,0 +1,134 @@
+# Translation for the Derivative Images plugin for Omeka.
+# Copyright (C) 2023 Corporation for Digital Scholarship
+# This file is distributed under the same license as the Omeka package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Derivative Images\n"
+"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-DerivativeImages/issues\n"
+"POT-Creation-Date: 2023-10-05 15:03-0400\n"
+"PO-Revision-Date: 2023-10-05 19:16+0000\n"
+"Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2024\n"
+"Language-Team: Catalan (Spain) (https://app.transifex.com/omeka/teams/14184/ca_ES/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: DerivativeImagesPlugin.php:33 models/DerivativeImagesJob.php:46
+msgid ""
+"The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem."
+msgstr ""
+"L'adaptador d'emmagatzematge no és una instància de: "
+"Omeka_Storage_Adapter_Filesystem."
+
+#: DerivativeImagesPlugin.php:38 models/DerivativeImagesJob.php:53
+msgid "The ImageMagick directory path is missing."
+msgstr "Cal indicar la ruta al directori ImageMagick."
+
+#: DerivativeImagesPlugin.php:64 views/admin/index/index.php:2
+msgid "Derivative Images"
+msgstr "Derivative Images"
+
+#: controllers/IndexController.php:24
+msgid ""
+"Processing files. This may take a while. You may continue administering your"
+" site."
+msgstr ""
+"Processant fitxers. Això pot trigar una estona. Podeu continuar administrant"
+" el vostre lloc."
+
+#: views/admin/index/index.php:9
+#, php-format
+msgid ""
+"Omeka attempts to create fullsize, thumbnail, and square thumbnail "
+"derivative images when a file is added. This plugin recreates (or creates) "
+"derivative images according to the size constraints set in the %sAppearance "
+"settings%s. This plugin is useful if image sizes must change for a new "
+"theme, after upgrading from an earlier version of Omeka, or after your "
+"server's %sImageMagick%s software has been upgraded."
+msgstr ""
+"L'Omeka intenta crear imatges derivades de miniatures completes, en "
+"miniatura i quadrades quan s'afegeix un fitxer. Aquest connector recrea (o "
+"crea) imatges derivades d'acord amb les restriccions de mida establertes a "
+"la %sconfiguració d'aparença%s. Aquest connector és útil si la mida de les "
+"imatges ha de canviar per a un tema nou, després d'actualitzar des d'una "
+"versió anterior de l'Omeka, o després que s'hagi actualitzat el programari "
+"%sImageMagick%s del vostre servidor. "
+
+#: views/admin/index/index.php:18
+msgid ""
+"Please note that Omeka is unable to create derivative images for some files."
+" We highly recommend that you back up Omeka's files directory before running"
+" this process."
+msgstr ""
+"Tingueu en compte que l'Omeka no pot crear imatges derivades per a alguns "
+"fitxers. Us recomanem que feu una còpia de seguretat del directori de "
+"fitxers de l'Omeka abans d'executar aquest procés."
+
+#: views/admin/index/index.php:23
+msgid "Process type"
+msgstr "Tipus de procés"
+
+#: views/admin/index/index.php:26
+msgid "Select files for creating new derivative images."
+msgstr "Seleccioneu fitxers per a crear imatges derivades noves."
+
+#: views/admin/index/index.php:27
+msgid "All files"
+msgstr "Tots els fitxers"
+
+#: views/admin/index/index.php:28
+msgid "Files that have derivative images"
+msgstr "Fitxers que tenen imatges derivades"
+
+#: views/admin/index/index.php:29
+msgid "Files that do not have derivative images"
+msgstr "Fitxers que no tenen imatges derivades"
+
+#: views/admin/index/index.php:34
+msgid "Image sizes"
+msgstr "Mides de la imatge"
+
+#: views/admin/index/index.php:38
+#, php-format
+msgid ""
+"Select which image sizes you want to create. Checking none will create all "
+"image sizes. (Sizes listed here are set in the %sAppearance settings%s.)"
+msgstr ""
+"Seleccioneu quines mides d'imatge voleu crear. Si no es marca cap, es "
+"crearan totes les mides de les imatges. (Les mides llistades aquí estan "
+"establertes a la %s configuració d'aparença %s.)"
+
+#: views/admin/index/index.php:41 views/admin/index/index.php:42
+#: views/admin/index/index.php:43
+msgid "pixels"
+msgstr "píxels"
+
+#: views/admin/index/index.php:43
+msgid "Square thumbnail"
+msgstr "Miniatura quadrada"
+
+#: views/admin/index/index.php:48
+msgid "MIME types"
+msgstr "Tipus MIME"
+
+#: views/admin/index/index.php:52
+msgid ""
+"Select which file MIME types you want to process. Checking none will process"
+" all MIME types. (This list represents every MIME type currently available "
+"in this Omeka site.)"
+msgstr ""
+"Seleccioneu quins tipus MIME de fitxer voleu processar. Si no es marca cap, "
+"es processaran tots els tipus MIME. (Aquesta llista representa tots els "
+"tipus MIME disponibles actualment en aquest lloc Omeka.)"
+
+#: views/admin/index/index.php:63
+msgid "Process Files"
+msgstr "Processa els fitxers"

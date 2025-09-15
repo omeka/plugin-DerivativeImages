@@ -1,0 +1,111 @@
+# Translation for the Derivative Images plugin for Omeka.
+# Copyright (C) 2023 Corporation for Digital Scholarship
+# This file is distributed under the same license as the Omeka package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Derivative Images\n"
+"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-DerivativeImages/"
+"issues\n"
+"POT-Creation-Date: 2023-10-05 15:03-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: DerivativeImagesPlugin.php:33 models/DerivativeImagesJob.php:46
+msgid ""
+"The storage adapter is not an instance of Omeka_Storage_Adapter_Filesystem."
+msgstr ""
+
+#: DerivativeImagesPlugin.php:38 models/DerivativeImagesJob.php:53
+msgid "The ImageMagick directory path is missing."
+msgstr ""
+
+#: DerivativeImagesPlugin.php:64 views/admin/index/index.php:2
+msgid "Derivative Images"
+msgstr ""
+
+#: controllers/IndexController.php:24
+msgid ""
+"Processing files. This may take a while. You may continue administering your "
+"site."
+msgstr ""
+
+#: views/admin/index/index.php:9
+#, php-format
+msgid ""
+"Omeka attempts to create fullsize, thumbnail, and square thumbnail "
+"derivative images when a file is added. This plugin recreates (or creates) "
+"derivative images according to the size constraints set in the %sAppearance "
+"settings%s. This plugin is useful if image sizes must change for a new "
+"theme, after upgrading from an earlier version of Omeka, or after your "
+"server's %sImageMagick%s software has been upgraded."
+msgstr ""
+
+#: views/admin/index/index.php:18
+msgid ""
+"Please note that Omeka is unable to create derivative images for some files. "
+"We highly recommend that you back up Omeka's files directory before running "
+"this process."
+msgstr ""
+
+#: views/admin/index/index.php:23
+msgid "Process type"
+msgstr ""
+
+#: views/admin/index/index.php:26
+msgid "Select files for creating new derivative images."
+msgstr ""
+
+#: views/admin/index/index.php:27
+msgid "All files"
+msgstr ""
+
+#: views/admin/index/index.php:28
+msgid "Files that have derivative images"
+msgstr ""
+
+#: views/admin/index/index.php:29
+msgid "Files that do not have derivative images"
+msgstr ""
+
+#: views/admin/index/index.php:34
+msgid "Image sizes"
+msgstr ""
+
+#: views/admin/index/index.php:38
+#, php-format
+msgid ""
+"Select which image sizes you want to create. Checking none will create all "
+"image sizes. (Sizes listed here are set in the %sAppearance settings%s.)"
+msgstr ""
+
+#: views/admin/index/index.php:41 views/admin/index/index.php:42
+#: views/admin/index/index.php:43
+msgid "pixels"
+msgstr ""
+
+#: views/admin/index/index.php:43
+msgid "Square thumbnail"
+msgstr ""
+
+#: views/admin/index/index.php:48
+msgid "MIME types"
+msgstr ""
+
+#: views/admin/index/index.php:52
+msgid ""
+"Select which file MIME types you want to process. Checking none will process "
+"all MIME types. (This list represents every MIME type currently available in "
+"this Omeka site.)"
+msgstr ""
+
+#: views/admin/index/index.php:63
+msgid "Process Files"
+msgstr ""
